@@ -1,0 +1,152 @@
+{
+  "education": [
+    {
+      "awards_achievements": [
+        "MOFA Taiwan Scholarship",
+        "Dean's List (2014, 2015): Top 5 in class"
+      ],
+      "degree": "Bachelor of Computer Science",
+      "department": "Computer Science",
+      "duration": "2014-2018",
+      "school_name": "Ecole Supérieure d'Infotronique d'Haïti"
+    },
+    {
+      "awards_achievements": null,
+      "degree": "Master of research in Software Engineering",
+      "department": "Electrical Engineering and Computer Science",
+      "duration": "2020-2022",
+      "school_name": "National Yang Ming Chiao Tung University"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-loudwige",
+  "highlighted_projects": [
+    {
+      "description": "Implemented a web application that analyzes resumes and checks for important missing sections. This project was implemented using Ruby, SQLite3, Agile, Layered Architecture, Domain Driven Design, Test Driven Design, and Docker Deployment.",
+      "git_url": "https://github.com/SOA-LouDLy/Jobify",
+      "name": "Jobifyy"
+    },
+    {
+      "description": "Implemented a web application that allows secure file sharing. It was implemented with a secure distributed architecture using the security dimensions of IT services such as Token-based authentication, Encrypted cookies, Client-Side policies and Google SSO, Database Hardening, and technologies such as Ruby, Slim, CSS, SQLite, Git, Github, Agile Methodology and Automated testing.",
+      "git_url": "https://github.com/SOA-LouDLy/jobifyy-api",
+      "name": "EtaShare"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": "Designed and implemented a cluster monitoring solution using Linux command lines, Bash scripts, PostgreSQL, docker, IntelliJ IDE, and SCRUM methodology to allow the Jarvis Linux Cluster Administration Team to manage a Linux cluster of 10 nodes/servers running CentOS 7. This project records the hardware specifications of each node and monitor node resource usage. The team uses those data to generate reports for future resource planning purposes.",
+      "git_url": "/linux_sql",
+      "name": "Cluster Monitor"
+    },
+    {
+      "description": [
+        "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
+        "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
+        "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      ],
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
+    },
+    {
+      "description": "",
+      "git_url": "/springboot",
+      "name": "Springboot App"
+    },
+    {
+      "description": "",
+      "git_url": "/python_data_anlytics",
+      "name": "Python Data Analytics"
+    },
+    {
+      "description": "",
+      "git_url": "/hadoop",
+      "name": "Hadoop"
+    },
+    {
+      "description": "",
+      "git_url": "/spark",
+      "name": "Spark"
+    },
+    {
+      "description": "",
+      "git_url": "/cloud_devops",
+      "name": "Cloud/DevOps"
+    }
+  ],
+  "name": "Loudwige Odice",
+  "others": [
+    {
+      "bullets": [
+        "Udacity Machine Learning (2019)"
+      ],
+      "title": "Certificates"
+    },
+    {
+      "bullets": [
+        "Winner"
+      ],
+      "title": "Awards"
+    },
+    {
+      "bullets": [
+        "Basketball player",
+        "Competitive gaming",
+        "Volunteer, ABC Food bank: Ut enim ad minim veniam"
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis",
+      "description": "Worked as a junior software developer developing multiple applications using technologies such as Linux, Java, RDBMS, SQL, Javascript, React, Docker, and data projects using Python, Hadoop, and Spark/Scala to perform data analysis. Immersed in an Agile environment adopting the SCRUM methodology.",
+      "duration": "2023-present",
+      "title": "Software Developer"
+    },
+    {
+      "company": "National Yang Ming Chiao Tung University",
+      "description": "Assisted 93 students with their programming lab assignments by explaining the requirements of each homework and answering questions. Discussed assignment and project concepts with other teaching assistants. Participated in selecting and grading students' programming assignments and final projects.",
+      "duration": "Mar 2021- Jul 2021",
+      "title": "Teaching Assistant"
+    },
+    {
+      "company": "World Vision International",
+      "description": "Collaborated in developing an application that uses data from calls made to the office to generate monthly reports that facilitate payment to the VOIP service provider of monthly fees and surcharges for internal outbound calls. Analyzed user needs to determine technical requirements. Technologies used: Java, MySQL, Bootstrap, JavaScript",
+      "duration": "Nov 2018- Feb 2019",
+      "title": "Intern"
+    },
+    {
+      "company": "HELP",
+      "description": "Participated in the implementation of a student attendance management system using Java. This system reduced the number of late arrivals to class by 95%. Monitored the entire software lifecycle to meet the project's specifications and deadlines. Technologies used: Java, MySQL, Bootstrap, JavaScript.",
+      "duration": "Jul 2017- Dec 2017",
+      "title": "Intern"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "Spring Boot",
+      "Ruby",
+      "SOA",
+      "REST API",
+      "MVC",
+      "Docker"
+    ],
+    "familiar": [
+      "Python",
+      "JavaScript",
+      "React",
+      "Test-Driven Design",
+      "Domain-Driven Design",
+      "Microservices"
+    ],
+    "proficient": [
+      "Java",
+      "IntelliJ",
+      "Maven",
+      "Linux/Bash",
+      "RDBMS/SQL",
+      "Agile/Scrum",
+      "Git"
+    ]
+  },
+  "summary": "I am a software developer passionate about building scalable, resilient, and secure applications. I have a bachelor's degree in computer science and spent two years in a master's program doing research in software requirements engineering. My experience in the field includes two internships where I learned about desktop application development using Core Java, two web applications in Ruby using Agile methodology, service-oriented architecture, and service security. In my spare time, I work on personal projects using Spring Boot. I am currently part of the Jarvis Software Development Program as a Junior Software Developer, working on several applications allowing me to hone my skills in the most sought-after technologies in the software development industry. Outside of school and work, I enjoy sharing my knowledge. In 2017, I volunteered as the coordinator of an IT project where I created a learning program to help children gain computer science skills. In 2021, I was a teaching assistant in a C++ data structures and algorithms class."
+}
