@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 #Create function to get hardware specification
 function get_hardware_specification() {
   local lscpu_out=$1
