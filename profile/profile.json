@@ -21,19 +21,19 @@
   "github_repo_root_url": "https://github.com/Jarvis-Consulting-Group/jarvis_data_eng-loudwige",
   "highlighted_projects": [
     {
-      "description": "Implemented a web application that analyzes resumes and checks for important missing sections. This project was implemented using Ruby, SQLite3, Agile, Layered Architecture, Domain Driven Design, Test Driven Design, and Docker Deployment.",
+      "description": "Designed and developed a resume analysis web application using Ruby, SQLite3, and agile methodologies. Utilized layered architecture and domain-driven design to ensure scalability and maintainability. Implemented test-driven development for quality assurance and Docker deployment for seamless deployment.",
       "git_url": "https://github.com/SOA-LouDLy/Jobify",
       "name": "Jobifyy"
     },
     {
-      "description": "Implemented a web application that allows secure file sharing. It was implemented with a secure distributed architecture using the security dimensions of IT services such as Token-based authentication, Encrypted cookies, Client-Side policies and Google SSO, Database Hardening, and technologies such as Ruby, Slim, CSS, SQLite, Git, Github, Agile Methodology and Automated testing.",
+      "description": "Designed and implemented a secure web application for file sharing using a distributed architecture and IT service security dimensions such as token-based authentication, encrypted cookies, client-side policies, and Google SSO. Technologies utilized include Ruby, Slim, CSS, SQLite, Git, and Github, with an Agile methodology and automated testing to ensure a high-quality product. Conducted database hardening to further enhance security measures.",
       "git_url": "https://github.com/SOA-LouDLy/jobifyy-api",
       "name": "EtaShare"
     }
   ],
   "jarvis_projects": [
     {
-      "description": "Designed and implemented a cluster monitoring solution using Linux command lines, Bash scripts, PostgreSQL, docker, IntelliJ IDE, and SCRUM methodology to allow the Jarvis Linux Cluster Administration Team to manage a Linux cluster of 10 nodes/servers running CentOS 7. This project records the hardware specifications of each node and monitor node resource usage. The team uses those data to generate reports for future resource planning purposes.",
+      "description": "Developed Bash script to monitor a cluster, collecting hardware and resource usage data from every machine and storing it in a PostgreSQL database. Created two tables in PostgreSQL to store hardware specifications and resource usage data. Automated data collection with crontab, running every minute, and utilized Docker to manage the PostgreSQL instance. Tested and deployed the application, ensuring the expected table structure and data storage.",
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
     },
@@ -104,19 +104,19 @@
     },
     {
       "company": "National Yang Ming Chiao Tung University",
-      "description": "Assisted 93 students with their programming lab assignments by explaining the requirements of each homework and answering questions. Discussed assignment and project concepts with other teaching assistants. Participated in selecting and grading students' programming assignments and final projects.",
+      "description": "Collaborated with other teaching assistants to assist 93 students with their programming lab assignments. Provided clear explanations of assignment requirements and answered questions to ensure students' comprehension. Participated in grading students' programming assignments and final projects, using rubrics to ensure consistent evaluation. Engaged in discussions with fellow teaching assistants to clarify assignment and project concepts, ensuring a cohesive and effective learning environment for students.",
       "duration": "Mar 2021- Jul 2021",
       "title": "Teaching Assistant"
     },
     {
       "company": "World Vision International",
-      "description": "Collaborated in developing an application that uses data from calls made to the office to generate monthly reports that facilitate payment to the VOIP service provider of monthly fees and surcharges for internal outbound calls. Analyzed user needs to determine technical requirements. Technologies used: Java, MySQL, Bootstrap, JavaScript",
+      "description": "Collaborated with a team to develop an application that uses call data to generate monthly reports for payment to the VOIP service provider. Analyzed user needs to determine technical requirements and utilized Java, MySQL, Bootstrap, and JavaScript to implement the solution.",
       "duration": "Nov 2018- Feb 2019",
       "title": "Intern"
     },
     {
       "company": "HELP",
-      "description": "Participated in the implementation of a student attendance management system using Java. This system reduced the number of late arrivals to class by 95%. Monitored the entire software lifecycle to meet the project's specifications and deadlines. Technologies used: Java, MySQL, Bootstrap, JavaScript.",
+      "description": "Developed and managed the software development life cycle of a Java-based student attendance management system that decreased tardiness by 95%. Utilized Java, MySQL, Bootstrap, and JavaScript technologies to build the system, ensuring adherence to project requirements and deadlines.",
       "duration": "Jul 2017- Dec 2017",
       "title": "Intern"
     }
