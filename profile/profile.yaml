@@ -42,7 +42,7 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Developed and implemented a cluster monitoring agent that reduced downtime and improved resource planning for the Jarvis Linux Cluster Administration (LCA) team. Utilized Linux command lines, Bash scripts, PostgreSQL, Docker, and IDEs to collect hardware specifications and monitor real-time node resource usage for a 10-node CentOS 7 Linux cluster. Stored the data in an RDBMS, enabling the team to generate accurate reports and identify future resource needs. Enabled users to analyze data using SQL queries, like the memory usage in percentage over a one-minute interval for each node.
+    description: Developed and implemented a cluster monitoring agent that improved resource planning for the Jarvis Linux Cluster Administration (LCA) team. Utilized Linux command lines, Bash scripts, PostgreSQL, Docker, and IDEs to collect hardware specifications and monitor real-time node resource usage for a 10-node CentOS 7 Linux cluster. Stored the data in an RDBMS, enabling the team to generate accurate reports and identify future resource needs. Enabled users to analyze data using SQL queries, like the memory usage in percentage over a one-minute interval for each node.
   - name: "Core Java Apps"
     git_url: "/core_java"
     description:
