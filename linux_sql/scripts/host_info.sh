@@ -53,4 +53,6 @@ insert_stmt="INSERT INTO host_info(hostname, cpu_number, cpu_architecture, cpu_m
                                    timestamp, total_mem) VALUES ('$hostname','$cpu_number','$cpu_architecture',
                                                                   '$cpu_model','$cpu_mhz','$l2_cache','$timestamp',
                                                                   '$total_mem')"
+
 insert_data "$insert_stmt" "$psql_host" "$psql_port" "$db_name" "$psql_user" "$psql_password"
+
