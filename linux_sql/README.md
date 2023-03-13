@@ -21,8 +21,7 @@ To get started with the Linux project, follow these steps:
   - Automate the application using crontab.
 
 ## Architecture
-
-
+![project architecture picture](assets/images/Architecture.png)
 ## Scripts
 The project includes several Bash scripts for collecting and inserting data into the PostgreSQL database, as well as a DDL script and a crontab setup.
 - **ddl.sql** </br>
