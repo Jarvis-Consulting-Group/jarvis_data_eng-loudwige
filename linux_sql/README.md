@@ -79,3 +79,5 @@ To test the bash script DDL:
 To deploy the application, I utilized crontab to automate the data collection process using the command: </br>
 ``` * * * * * bash /path to host_usage.sh localhost 5432 db_name db_user db_password > /tmp/host_usage.log ``` </br>
 This command was scheduled to run every minute, which allowed the monitoring agent to collect and persist hardware usage data at regular intervals. The data was then stored in a PostgreSQL database, which was managed using Docker.
+## Improvement
+* Set up triggers on the database tables and use tools to alert administrators of performance issues.
