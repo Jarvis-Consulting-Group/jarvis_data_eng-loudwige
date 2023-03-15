@@ -81,3 +81,4 @@ To deploy the application, I utilized crontab to automate the data collection pr
 This command was scheduled to run every minute, which allowed the monitoring agent to collect and persist hardware usage data at regular intervals. The data was then stored in a PostgreSQL database, which was managed using Docker.
 ## Improvement
 * Set up triggers on the database tables and use tools to alert administrators of performance issues.
+* Implement unit tests for the scripts to ensure that they are working as expected
