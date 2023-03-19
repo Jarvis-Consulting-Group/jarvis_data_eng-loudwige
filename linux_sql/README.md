@@ -1,7 +1,7 @@
 # Introduction
-The Linux Project is a cluster monitoring agent designed to collect both hardware and resource usage data from every machine in a cluster, and store this information in a PostgreSQL database. This data collection and insertion into the database are carried out by two Bash scripts, which are installed on each node of the cluster. Later on, the Jarvis cluster administration team will be able to leverage this data to answer critical business questions.
+<p align="justify">The Linux Project is a cluster monitoring agent designed to collect both hardware and resource usage data from every machine in a cluster, and store this information in a PostgreSQL database. This data collection and insertion into the database are carried out by two Bash scripts, which are installed on each node of the cluster. Later on, the Jarvis cluster administration team will be able to leverage this data to answer critical business questions.</p>
 
-Apart from Bash scripts, several other technologies are used in this project, including Linux command-line to create commands that extract specific machine information, such as the number of CPUs, PostgreSQL for data persistence, Docker for managing the PostgreSQL instance, IntelliJ IDEA as the primary integrated development environment, and crontab for automating the application.
+<p align="justify">Apart from Bash scripts, several other technologies are used in this project, including Linux command-line to create commands that extract specific machine information, such as the number of CPUs, PostgreSQL for data persistence, Docker for managing the PostgreSQL instance, IntelliJ IDEA as the primary integrated development environment, and crontab for automating the application.</p>
 
 # Quick Start
 To get started with the Linux project, follow these steps:
