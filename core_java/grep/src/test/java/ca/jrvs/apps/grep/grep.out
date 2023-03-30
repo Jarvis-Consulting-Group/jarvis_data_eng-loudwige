@@ -1,0 +1,7 @@
+  public void readLinesTest() throws IllegalArgumentException, IOException {
+   * @throws IllegalArgumentException if a given input file is not a file
+  List<String> readLines(File inputFile) throws IllegalArgumentException, IOException;
+   * @throws IllegalArgumentException if a given inputFile is not a file
+  public List<String> readLines(File inputFile) throws IllegalArgumentException, FileReadException {
+      throw new IllegalArgumentException("File does not exist: " + absolutePath);
+      throw new IllegalArgumentException("Usage: JavaGrep regex rootPath outfile");
