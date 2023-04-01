@@ -86,6 +86,9 @@ public class JavaGrepImp implements JavaGrep {
     if (!inputFile.exists()) {
       throw new IllegalArgumentException("File does not exist: " + absolutePath);
     }
+    if(!inputFile.isFile()){
+      throw new IllegalArgumentException("The file is not a file" + absolutePath);
+    }
     try (BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {
       List<String> lines = new ArrayList<>();
       String line;
