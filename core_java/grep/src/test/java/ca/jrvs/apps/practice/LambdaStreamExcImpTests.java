@@ -1,10 +1,9 @@
-package ca.jrvs.apps.grep;
+package ca.jrvs.apps.practice;
 
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import ca.jrvs.apps.practice.LambdaStreamExcImp;
 import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
