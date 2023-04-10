@@ -2,13 +2,11 @@ package ca.jrvs.apps.grep;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import ca.jrvs.apps.grep.exceptions.EmptyFileException;
+import ca.jrvs.apps.grep.exceptions.ListFilesException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
@@ -21,17 +19,6 @@ public class JavaGrepImpTests {
     this.javaGrepImp = new JavaGrepImp();
   }
 
-  @Test
-  public void listFilesFromDirectoryOfFiles() throws EmptyFileException {
-    String rootDir = "/home/centos/dev/jarvis_data_eng_Loudwige/core_java/grep/src"
-        + "/main/java/ca/jrvs/apps/grep";
-    List<File> expectedOutputs = Arrays.stream(Objects.requireNonNull(new File(rootDir)
-            .listFiles()))
-        .filter(File::isFile)
-        .collect(Collectors.toList());
-    List<File> actualOutputs = javaGrepImp.listFiles(rootDir);
-    assertEquals(expectedOutputs, actualOutputs);
-  }
 
   @Test
   public void listFilesRecursively() {
@@ -45,7 +32,7 @@ public class JavaGrepImpTests {
           .stream()
           .map(File::getName)
           .collect(Collectors.toList());
-    } catch (EmptyFileException e) {
+    } catch (ListFilesException e) {
       throw new RuntimeException(e);
     }
     assertEquals(expectedFileNames, actualFileNames);
