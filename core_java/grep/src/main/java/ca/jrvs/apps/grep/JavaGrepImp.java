@@ -1,6 +1,6 @@
 package ca.jrvs.apps.grep;
 
-import ca.jrvs.apps.grep.exceptions.EmptyFileException;
+import ca.jrvs.apps.grep.exceptions.ListFilesException;
 import ca.jrvs.apps.grep.exceptions.FileReadException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -54,12 +54,12 @@ public class JavaGrepImp implements JavaGrep {
    * @return files under the root directory
    */
   @Override
-  public List<File> listFiles(String rootDir) throws EmptyFileException {
+  public List<File> listFiles(String rootDir) throws ListFilesException {
     List<File> fileslist = new ArrayList<>();
     File file = new File(rootDir);
     File[] files = file.listFiles();
     if ((files != null ? files.length : 0) == 0) {
-      throw new EmptyFileException("The directory is empty: " + file.getName());
+      throw new ListFilesException("The directory is empty: " + file.getName());
     }
     for (File filename : files) {
       if (filename.isDirectory()) {
