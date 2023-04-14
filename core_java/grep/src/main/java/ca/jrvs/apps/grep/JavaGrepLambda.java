@@ -5,11 +5,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
+import java.util.stream.Stream;
 
-public interface JavaGrep {
+public interface JavaGrepLambda {
 
   /**
-   * @throws IOException
+   * @throws IOException if the rootPath is not found
    */
   void process() throws IOException;
 
@@ -19,7 +20,7 @@ public interface JavaGrep {
    * @param rootDir input directory
    * @return files under the rootDir
    */
-  List<File> listFiles(String rootDir) throws FileNotFoundException, ListFilesException;
+  Stream<File> listFiles(String rootDir) throws FileNotFoundException, ListFilesException;
 
   /**
    * Read a file and return all the lines
@@ -28,7 +29,7 @@ public interface JavaGrep {
    * @return lines
    * @throws IllegalArgumentException if a given input file is not a file
    */
-  List<String> readLines(File inputFile) throws IllegalArgumentException, IOException;
+  Stream<String> readLines(File inputFile) throws IllegalArgumentException, IOException;
 
   /**
    * Check of a line contains the regex pattern
