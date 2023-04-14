@@ -1,8 +1,5 @@
 # Introduction
-<p align="justify"> The Java Grep application performs a recursive search for a specified text 
-pattern within a directory and saves matched lines to a file. It utilizes various technologies 
-such as Intellij IDEA, Core Java, Maven, Regex, Lambda & Stream APIs. 
-The project was containerized using Docker for efficient deployment and management. </p>
+<p align="justify"> The Java Grep app is a powerful tool that can recursively search for a specific text pattern within a directory and save matched lines to a file. It is built using various technologies such as Core Java, Maven, Regex, Lambda, and Stream APIs. The app has been containerized using Docker for more efficient deployment and management. Overall, this app provides an excellent solution for users who need to search data quickly and accurately </p>
 
 # Quick Start
 
