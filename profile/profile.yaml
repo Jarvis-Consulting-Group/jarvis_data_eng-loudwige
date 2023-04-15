@@ -15,8 +15,7 @@ skills:
     - Java
     - IntelliJ
     - Maven
-    - Linux/Bash
-    - RDBMS/SQL
+    - RDBMS/Postgresql
     - Agile/Scrum
     - Git
   # At least 5 skills
@@ -27,15 +26,14 @@ skills:
     - REST API
     - MVC
     - Docker
+    - Linux/Bash
   # At least 5 skills
   familiar:
-    - Python
     - JavaScript
     - React
     - Test-Driven Design
-    - Domain-Driven Design
     - Microservices
-
+    - Python
 # List of Jarvis projects
 jarvis_projects:
   - name: "Cluster Monitor"
@@ -47,8 +45,8 @@ jarvis_projects:
     git_url: "/core_java"
     description:
       - "Twitter App: Not Started."
-      - "JDBC App: Not Started."
-      - "Grep App: Not Started"
+      - "JDBC App: Developed proficiency in data access patterns and JDBC by performing data manipulation tasks on the hplussport PostgreSQL database. Utilized Dbeaver and Intellij Idea for database management, Docker for containerization, PostgreSQL and PSQL CLI tool for database creation and manipulation, JDBC for data access, and Maven for build automation."
+      - "Grep App: Gained hands-on experience in Core Java, Maven, Regex, Lambda, and Stream APIs, as well as containerization with Docker by developing he Java Grep app, a powerful text pattern searching tool that can recursively search for a specific text pattern within a directory and save matched lines to a file."
   - name: "Springboot App"
     git_url: "/springboot"
     description: ""
