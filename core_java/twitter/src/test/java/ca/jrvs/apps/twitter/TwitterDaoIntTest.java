@@ -17,15 +17,15 @@ public class TwitterDaoIntTest {
 
   private TwitterDao twitterDao;
 
-@Before
+  @Before
   public void setUp() {
 
-  HttpHelper httpHelper = new TwitterHttpHelper(
-      System.getenv("consumerKey"),
-      System.getenv("consumerSecret"),
-      System.getenv("accessToken"),
-      System.getenv("tokenSecret")
-  );
+    HttpHelper httpHelper = new TwitterHttpHelper(
+        System.getenv("consumerKey"),
+        System.getenv("consumerSecret"),
+        System.getenv("accessToken"),
+        System.getenv("tokenSecret")
+    );
 
     // Create the TwitterDao instance with the mock HttpHelper
     this.twitterDao = new TwitterDao(httpHelper);
@@ -42,8 +42,6 @@ public class TwitterDaoIntTest {
     assertEquals(text, tweet.getText());
     assertTrue(hashtag.contains(tweet.getEntities().getHashtags().get(0).getText()));
   }
-
-
   @Test
   public void findById() throws Exception {
     String id = "1650695228079087616";
@@ -53,7 +51,7 @@ public class TwitterDaoIntTest {
   }
 
   @Test
-  public void deleteById(){
+  public void deleteById() {
     String id = "1651417903881674756";
     Tweet tweet = twitterDao.deleteById(id);
     assertNull(tweet);
