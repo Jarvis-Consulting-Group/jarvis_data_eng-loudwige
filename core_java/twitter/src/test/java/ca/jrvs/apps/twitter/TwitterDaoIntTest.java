@@ -31,7 +31,6 @@ public class TwitterDaoIntTest {
     this.twitterDao = new TwitterDao(httpHelper);
   }
 
-
   @Test
   public void create() {
     String hashtag = "#abc";
@@ -42,6 +41,7 @@ public class TwitterDaoIntTest {
     assertEquals(text, tweet.getText());
     assertTrue(hashtag.contains(tweet.getEntities().getHashtags().get(0).getText()));
   }
+
   @Test
   public void findById() throws Exception {
     String id = "1650695228079087616";
