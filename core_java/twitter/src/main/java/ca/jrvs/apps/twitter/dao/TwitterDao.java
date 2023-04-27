@@ -9,6 +9,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
 import org.apache.http.util.EntityUtils;
 
 public class TwitterDao implements CrdDao<Tweet, String> {
@@ -97,6 +98,7 @@ public class TwitterDao implements CrdDao<Tweet, String> {
       throw new IllegalArgumentException("Invalid tweet input: ", e);
     }
     HttpResponse response = httpHelper.httpGet(uri);
+    System.out.println("response: " + response);
     return parseResponseBody(response, HTTP_OK);
   }
 
@@ -109,7 +111,15 @@ public class TwitterDao implements CrdDao<Tweet, String> {
       throw new IllegalArgumentException("Invalid tweet input: ", e);
     }
     HttpResponse response = httpHelper.httpPost(uri);
-    return parseResponseBody(response, HTTP_OK);
+    parseResponseBody(response, HTTP_OK);
+
+    if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
+      throw new RuntimeException("Unexpected HTTP status: " + response.getStatusLine()
+          .getStatusCode());
+    }
+
+    // Delete was successful, return null
+    return null;
   }
 
   private URI getDeleteUri(String s) throws URISyntaxException, UnsupportedEncodingException {

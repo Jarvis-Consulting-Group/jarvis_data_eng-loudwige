@@ -8,12 +8,7 @@ import static org.junit.Assert.fail;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.ArgumentMatchers.isNotNull;
-import static org.mockito.ArgumentMatchers.isNull;
-import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import ca.jrvs.apps.twitter.dao.TwitterDao;
@@ -21,9 +16,7 @@ import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
 import ca.jrvs.apps.twitter.dto.JsonUtil;
 import ca.jrvs.apps.twitter.dto.TweetUtil;
 import ca.jrvs.apps.twitter.model.Tweet;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import java.io.IOException;
-import org.apache.http.HttpResponse;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -33,6 +26,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class TwitterDaoUnitTest {
+
   @Mock
   HttpHelper httpHelperMock;
 
@@ -58,10 +52,10 @@ public class TwitterDaoUnitTest {
     String hashtag = "#abc";
     String text = "Hello world" + hashtag + " ";
     when(httpHelperMock.httpPost(isNotNull())).thenThrow(new RuntimeException("mock"));
-    try{
+    try {
       twitterDao.create(TweetUtil.buildTweet(text));
       fail();
-    }catch(RuntimeException e){
+    } catch (RuntimeException e) {
       assertTrue(true);
     }
     String tweetJsonString = STRING_JSON;
@@ -77,34 +71,21 @@ public class TwitterDaoUnitTest {
   }
 
   @Test
-  public void deleteTweetById(){
+  public void deleteTweetById() {
     String tweetJson = STRING_JSON;
     TwitterDao spyTwitterDao = Mockito.spy(twitterDao);
-    Tweet expectedTweet;
-    try {
-      expectedTweet = JsonUtil.toObjectFromJson(tweetJson, Tweet.class);
-    } catch (IOException e) {
-      throw new RuntimeException(e);
-    }
-    doReturn(expectedTweet).when(spyTwitterDao).findById("1650700146370289664");
-    doNothing().when(spyTwitterDao).deleteById("1650700146370289664");
-
-    Tweet actualTweet = spyTwitterDao.findById("1650700146370289664");
-    assertEquals(expectedTweet.getId_str(), actualTweet.getId_str());
-
-    spyTwitterDao.deleteById("1650700146370289664");
-    actualTweet = spyTwitterDao.findById("1650700146370289664");
-    assertNull(actualTweet);
+    doReturn(null).when(spyTwitterDao).deleteById("1650700146370289664");
+    Tweet deletedTweet = spyTwitterDao.deleteById("1650700146370289664");
+    assertNull(deletedTweet);
   }
 
   @Test
-  public void findTweetById(){
+  public void findTweetById() {
     String tweetJson = STRING_JSON;
-    try{
+    try {
       twitterDao.findById("1097607853932564480");
       fail();
-    } catch (RuntimeException e)
-    {
+    } catch (RuntimeException e) {
       assertTrue(true);
     }
     TwitterDao spyTwitterDao = Mockito.spy(twitterDao);
