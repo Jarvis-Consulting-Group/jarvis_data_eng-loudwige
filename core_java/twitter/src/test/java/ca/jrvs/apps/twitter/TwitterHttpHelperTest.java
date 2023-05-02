@@ -9,6 +9,7 @@ import org.apache.http.util.EntityUtils;
 import org.junit.Test;
 
 public class TwitterHttpHelperTest {
+
   String consumerKey = System.getenv("consumerKey");
   String consumerSecret = System.getenv("consumerSecret");
   String accessToken = System.getenv("accessToken");
@@ -18,7 +19,7 @@ public class TwitterHttpHelperTest {
   String id = "1649980136983240705";
 
   @Test
-  public void HttpPost() throws Exception{
+  public void HttpPost() throws Exception {
     String status = "In case you didn't know!";
     PercentEscaper percentEscaper = new PercentEscaper("", false);
     HttpResponse response = twitterHttpHelper.httpPost(
@@ -28,15 +29,15 @@ public class TwitterHttpHelperTest {
   }
 
   @Test
-  public void HttpGet() throws Exception{
+  public void HttpGet() throws Exception {
     HttpResponse response1 = twitterHttpHelper.httpGet(URI.create("https://api.twitter.com/1.1/"
         + "statuses/lookup.json?id=" + id));
     System.out.println(EntityUtils.toString(response1.getEntity()));
   }
 
   @Test
-  public void HttpDelete() throws Exception{
-    HttpResponse response2  = twitterHttpHelper.httpPost(URI.create("https://api.twitter.com/1.1/"
+  public void HttpDelete() throws Exception {
+    HttpResponse response2 = twitterHttpHelper.httpPost(URI.create("https://api.twitter.com/1.1/"
         + "statuses/destroy/" + id + ".json"));
     System.out.println(EntityUtils.toString(response2.getEntity()));
   }

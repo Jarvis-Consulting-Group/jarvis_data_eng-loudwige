@@ -1,7 +1,6 @@
 package ca.jrvs.apps.twitter;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import ca.jrvs.apps.twitter.dao.TwitterDao;
@@ -48,7 +47,9 @@ public class TwitterDaoMockitoIntTest {
 
   @Test
   public void createTweet() {
-    Tweet tweetToPass = TweetUtil.buildTweet(text);
+    Double lon = -1d;
+    Double lat = 1d;
+    Tweet tweetToPass = TweetUtil.buildTweet(text, lat, lon);
     Tweet receivedTweet = twitterDao.create(tweetToPass);
     assertEquals(text, receivedTweet.getText());
   }
@@ -63,6 +64,6 @@ public class TwitterDaoMockitoIntTest {
   @Test
   public void deleteTweetById() {
     Tweet deletedTweet = twitterDao.deleteById(tweetId);
-    assertNull(deletedTweet);
+    assertEquals(deletedTweet.getId_str(), tweetId);
   }
 }

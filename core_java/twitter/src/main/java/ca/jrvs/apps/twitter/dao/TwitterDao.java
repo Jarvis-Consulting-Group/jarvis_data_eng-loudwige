@@ -11,22 +11,19 @@ import java.net.URLEncoder;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.util.EntityUtils;
+import org.springframework.web.util.UriComponentsBuilder;
 
 public class TwitterDao implements CrdDao<Tweet, String> {
 
   private static final String API_BASE_URI = "https://api.twitter.com";
-  private static final String POST_PATH = "/1.1/statuses/update.json?status";
+  private static final String POST_PATH = "/1.1/statuses/update.json?status=";
   private static final String GET_PATH = "/1.1/statuses/show.json";
   private static final String DELETE_PATH = "/1.1/statuses/destroy/";
-  private static final String ID = "id";
   private static final String JSON_EXTENSION = ".json";
 
   private static final String QUERY_SYM = "?";
-
-  private static final String EQUAL = "=";
-
   private static final int HTTP_OK = 200;
-  private HttpHelper httpHelper;
+  private final HttpHelper httpHelper;
 
   public TwitterDao(HttpHelper httpHelper) {
     this.httpHelper = httpHelper;
@@ -45,7 +42,7 @@ public class TwitterDao implements CrdDao<Tweet, String> {
   }
 
   public Tweet parseResponseBody(HttpResponse response, Integer statusCode) {
-    Tweet tweet = null;
+    Tweet tweet;
     if (response == null) {
       throw new IllegalArgumentException("Response cannot be null");
     }
@@ -78,16 +75,19 @@ public class TwitterDao implements CrdDao<Tweet, String> {
 
   private static URI getPostUri(Tweet tweet) throws URISyntaxException,
       UnsupportedEncodingException {
-      String encodedText = URLEncoder.encode(tweet.getText(), "UTF-8");
-      String uriString = API_BASE_URI + POST_PATH + EQUAL + encodedText;
-      return  URI.create(uriString);
+    return UriComponentsBuilder.fromUriString(API_BASE_URI + POST_PATH)
+        .queryParam("status", URLEncoder.encode(tweet.getText(), "UTF-8"))
+        .queryParam("lat", tweet.getCoordinates().getCoordinates().get(0))
+        .queryParam("long", tweet.getCoordinates().getCoordinates().get(1))
+        .build()
+        .toUri();
   }
   private static URI getGetUri(String s) throws URISyntaxException,
       UnsupportedEncodingException {
-    String encodedText = URLEncoder.encode(s, "UTF-8");
-    String uriString = API_BASE_URI + GET_PATH + QUERY_SYM + ID + EQUAL +
-        Long.parseLong(encodedText);
-    return  URI.create(uriString);
+    return UriComponentsBuilder.fromUriString(API_BASE_URI + GET_PATH + QUERY_SYM)
+        .queryParam("id", Long.parseLong(URLEncoder.encode(s, "UTF-8")))
+        .build()
+        .toUri();
   }
   @Override
   public Tweet findById(String s) {
@@ -111,15 +111,13 @@ public class TwitterDao implements CrdDao<Tweet, String> {
       throw new IllegalArgumentException("Invalid tweet input: ", e);
     }
     HttpResponse response = httpHelper.httpPost(uri);
-    parseResponseBody(response, HTTP_OK);
-
     if (response.getStatusLine().getStatusCode() != HttpStatus.SC_OK) {
       throw new RuntimeException("Unexpected HTTP status: " + response.getStatusLine()
           .getStatusCode());
     }
 
     // Delete was successful, return null
-    return null;
+    return parseResponseBody(response, HTTP_OK);
   }
 
   private URI getDeleteUri(String s) throws URISyntaxException, UnsupportedEncodingException {

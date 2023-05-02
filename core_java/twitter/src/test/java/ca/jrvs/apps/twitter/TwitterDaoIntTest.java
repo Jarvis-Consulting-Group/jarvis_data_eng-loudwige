@@ -1,7 +1,6 @@
 package ca.jrvs.apps.twitter;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import ca.jrvs.apps.twitter.dao.TwitterDao;
@@ -35,7 +34,9 @@ public class TwitterDaoIntTest {
   public void create() {
     String hashtag = "#abc";
     String text = "Hello EveryBody " + hashtag + " ";
-    Tweet postTweet = TweetUtil.buildTweet(text);
+    Double lat = 1d;
+    Double lon = -1d;
+    Tweet postTweet = TweetUtil.buildTweet(text, lat, lon);
 
     Tweet tweet = twitterDao.create(postTweet);
     assertEquals(text, tweet.getText());
@@ -52,8 +53,8 @@ public class TwitterDaoIntTest {
 
   @Test
   public void deleteById() {
-    String id = "1651417903881674756";
+    String id = "1653143409236819972";
     Tweet tweet = twitterDao.deleteById(id);
-    assertNull(tweet);
+    assertEquals(tweet.getId_str(), "1653143409236819972");
   }
 }
